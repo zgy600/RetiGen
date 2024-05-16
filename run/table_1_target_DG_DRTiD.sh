@@ -1,0 +1,2 @@
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+python ../retigen/main_retigen.py seed=2024 port=20001 memo='target' project='RetiGen_20240324' data.data_root='../GDRBench_Data/' data.workers=8 optim.lr=2e-4 data.source_domains='[APTOS, IDRID, DEEPDR, RLDR, MFIDDR_1view]' data.target_domains='[DRTiD_2views]'  model_src.algorithm=GDRNet dg_mode=DG output='../trained_models/Result_2view/DG_DRTiD_2views/GDRNet' 

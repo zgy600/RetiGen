@@ -1,0 +1,11 @@
+datasets/
+**/*.cpython-311*
+**/*.pyc
+**/*.tar
+**/*.log
+**/wandb/**
+trained_models/Result_1view/*
+trained_models/Result_2view/*
+trained_models/Result_4view/*
+retigen/output
+run/output
