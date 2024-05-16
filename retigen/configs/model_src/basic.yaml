@@ -1,0 +1,11 @@
+arch: "resnet50"
+bottleneck_dim: 0
+weight_norm_dim: 0   # refers to Weight Normalization layer
+algorithm: "GDRNet"
+backbone: "resnet50"
+num_classes: 5
+use_bottleneck: false
+BACKBONE: "resnet50"
+DROP_OUT: 0.0
+DATASET:
+  NUM_CLASSES: 5

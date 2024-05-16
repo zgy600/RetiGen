@@ -1,0 +1,42 @@
+data_root: "/datasets"
+dataset: "RetiGen"
+train_ratio: 0.9      # ratio of training data used in source training
+source_domains:
+  - "APTOS, IDRID, DEEPDR, RLDR, DRTiD_1view"
+target_domains:
+  - "MFIDDR_4views"
+pl_list: null         # cached initial pseudo labels to save time
+aug_type: "moco-v2"   # used in TTA contrastive learning
+num_classes: 5
+
+batch_size: 128
+workers: 4
+
+EPOCHS: 100
+LEARNING_RATE: 0.001
+BATCH_SIZE: 16
+WEIGHT_DECAY: 0.0005
+MOMENTUM: 0.9
+
+GDRNET:
+  BETA: 0.5
+  TEMPERATURE: 0.1
+  SCALING_FACTOR: 4.0
+  
+TRANSFORM:
+  AUGPROB: 0.5
+  COLORJITTER_B: 1
+  COLORJITTER_C: 1
+  COLORJITTER_S: 1
+  COLORJITTER_H: 0.05
+
+FISHR:
+  NUM_GROUPS: 1
+  EMA: 0.95
+  PENALTY_ANNEAL_ITERS: 1500
+  LAMBDA: 1000.
+
+DRGEN:
+  N_CONVERGENCE: 3
+  N_TOLERANCE: 6
+  TOLERANCE_RATIO: 0.3
