@@ -1,4 +1,4 @@
-# RetiGen
+# RetiGen: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images
 ## Introduction
 
 Pytorch implementation for paper [**RetiGen**: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images](https://arxiv.org/abs/2403.15647) ![fig2](figures/framework.jpg)
@@ -82,6 +82,8 @@ Your dataset should be organized as:
 
 ```
 
+## Train and validate
+
 ### Training source domain
    ```
 cd run/
@@ -93,7 +95,7 @@ cd run/
 table_1_target_DG_MFIDDR.sh
    ```
 
-### Citation
+## Citation
 If this repo is useful for your research, please consider citing our paper:
 ```bibtex
 @misc{chen2024retigen,

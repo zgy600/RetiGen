@@ -176,7 +176,6 @@ def eval_and_label_dataset(dataloader, model, banks, args, mode="default"):
         file_path = f"/media/raid/gongyu/projects/MVDRG/Result_20240430/_source_{source_domains[0]}_{args.name}.txt"
         # file_path = f"/media/raid/gongyu/projects/MVDRG/Result_RetiGen_GDRNet/_source_a_{alpha}_e_{eta}_.txt"
         print(file_path)
-        # 将字符串写入文件
         with open(file_path, 'w') as file:
             file.write(result_string)
     
