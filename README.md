@@ -1,15 +1,15 @@
 # RetiGen
-### Introduction
+## Introduction
 
 Pytorch implementation for paper [**RetiGen**: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images](https://arxiv.org/abs/2403.15647) ![fig2](figures/framework.jpg)
 
-### Abstract
+## Abstract
 
 This study introduces a novel framework for enhancing domain generalization in medical imaging, specifically focusing on utilizing unlabelled multi-view colour fundus photographs. Unlike traditional approaches that rely on single-view imaging data and face challenges in generalizing across diverse clinical settings, our method leverages the rich information in the unlabelled multi-view imaging data to improve model robustness and accuracy. By incorporating a class balancing method, a test-time adaptation technique and a multi-view optimization strategy, we address the critical issue of domain shift that often hampers the performance of machine learning models in real-world applications. Experiments comparing various state-of-the-art domain generalization and test-time optimization methodologies show that our approach consistently outperforms when combined with existing baseline and state-of-the-art methods. We also show our online method improves all existing techniques. Our framework demonstrates improvements in domain generalization capabilities and offers a practical solution for real-world deployment by facilitating online adaptation to new, unseen datasets.
 
-### Getting started
+## Getting started
 
-#### Install
+### Install
 
 1. Clone this repository and navigate to retigen folder
 
@@ -31,7 +31,7 @@ This study introduces a novel framework for enhancing domain generalization in m
    pip install -r requirements.txt
    ```
 
-#### Data preparation
+### Data preparation
 
 Your dataset should be organized as:
 
@@ -82,6 +82,13 @@ Your dataset should be organized as:
 
 ```
 
-#### Training souce domain
-
-#### Training target domain
+### Training source domain
+   ```
+cd run/
+table_1_origin_DG_MFIDDR_DRTiD.sh
+   ```
+### Training target domain
+   ```
+cd run/
+table_1_target_DG_MFIDDR.sh
+   ```
