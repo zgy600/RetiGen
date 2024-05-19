@@ -92,3 +92,16 @@ table_1_origin_DG_MFIDDR_DRTiD.sh
 cd run/
 table_1_target_DG_MFIDDR.sh
    ```
+
+### Citation
+If this repo is useful for your research, please consider citing our paper:
+```bibtex
+@misc{chen2024retigen,
+      title={RetiGen: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images}, 
+      author={Ze Chen and Gongyu Zhang and Jiayu Huo and Joan Nunez do Rio and Charalampos Komninos and Yang Liu and Rachel Sparks and Sebastien Ourselin and Christos Bergeles and Timothy Jackson},
+      year={2024},
+      eprint={2403.15647},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
