@@ -1,6 +1,4 @@
 # RetiGen
-[toc]
-
 ### Introduction
 
 Pytorch implementation for paper [**RetiGen**: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images](https://arxiv.org/abs/2403.15647) ![fig2](figures/framework.jpg)
