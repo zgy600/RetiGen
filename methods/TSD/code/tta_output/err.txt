@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 145, in <module>
+    args = get_args()
+  File "unsupervise_adapt.py", line 119, in get_args
+    args = img_param_init(args)
+  File "/media/raid/gongyu/projects/MVDRG/TSD/code/utils/util.py", line 122, in img_param_init
+    args.domains = domains
+UnboundLocalError: local variable 'domains' referenced before assignment
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 145, in <module>
+    args = get_args()
+  File "unsupervise_adapt.py", line 119, in get_args
+    args = img_param_init(args)
+  File "/media/raid/gongyu/projects/MVDRG/TSD/code/utils/util.py", line 122, in img_param_init
+    args.domains = domains
+UnboundLocalError: local variable 'domains' referenced before assignment
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 145, in <module>
+    args = get_args()
+  File "unsupervise_adapt.py", line 119, in get_args
+    args = img_param_init(args)
+  File "/media/raid/gongyu/projects/MVDRG/TSD/code/utils/util.py", line 122, in img_param_init
+    args.domains = domains
+UnboundLocalError: local variable 'domains' referenced before assignment
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 149, in <module>
+    algorithm_class = alg.get_algorithm_class(args.algorithm)
+NameError: name 'alg' is not defined
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 155, in <module>
+    dataloader = adapt_loader(args)
+  File "unsupervise_adapt.py", line 141, in adapt_loader
+    testset = ImageFolder(root=data_root,transform=test_transform)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/torchvision/datasets/folder.py", line 256, in __init__
+    is_valid_file=is_valid_file)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/torchvision/datasets/folder.py", line 126, in __init__
+    classes, class_to_idx = self._find_classes(self.root)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/torchvision/datasets/folder.py", line 164, in _find_classes
+    classes = [d.name for d in os.scandir(dir) if d.is_dir()]
+FileNotFoundError: [Errno 2] No such file or directory: '/media/raid/gongyu/projects/MVDRG/GDRBench_Data/APTOS'
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 201, in <module>
+    adapt_model = TSD(algorithm,optimizer,filter_K=args.filter_K,steps=args.steps, episodic=args.episodic)
+  File "/media/raid/gongyu/projects/MVDRG/TSD/code/adapt_algorithm.py", line 331, in __init__
+    warmup_supports = self.classifier.fc.weight.data.detach()
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/torch/nn/modules/module.py", line 948, in __getattr__
+    type(self).__name__, name))
+AttributeError: 'Linear' object has no attribute 'fc'
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 225, in <module>
+    f1 = f1_score(label, pred_arr, average='macro')
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_classification.py", line 1131, in f1_score
+    zero_division=zero_division,
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_classification.py", line 1270, in fbeta_score
+    zero_division=zero_division,
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_classification.py", line 1544, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels, pos_label)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_classification.py", line 1348, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_classification.py", line 84, in _check_targets
+    check_consistent_length(y_true, y_pred)
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/utils/validation.py", line 334, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [36, 8612]
+Traceback (most recent call last):
+  File "unsupervise_adapt.py", line 226, in <module>
+    auc_ovo = roc_auc_score(labels_arr, outputs_arr, average='macro', multi_class='ovo')
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 562, in roc_auc_score
+    y_true, y_score, labels, multi_class, average, sample_weight
+  File "/opt/anaconda3/envs/tast/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 629, in _multiclass_roc_auc_score
+    "Target scores need to be probabilities for multiclass "
+ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. they should sum up to 1.0 over classes
