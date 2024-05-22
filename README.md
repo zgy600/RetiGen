@@ -100,8 +100,8 @@ cd run/
    ```
 
 ### Test-time adaptation comparison
-#### TAST
 ```
+TAST
 cd /path/to/RETIGEN/methods/TAST
 python -m domainbed.scripts.unsup_adapt\
        --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/GDRNet\
@@ -109,9 +109,8 @@ python -m domainbed.scripts.unsup_adapt\
 python -m domainbed.scripts.unsup_adapt\
        --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM\
        --adapt_algorithm=TAST
-```
-#### T3A
-```
+
+T3A
 cd /path/to/RETIGEN/methods/TAST
 python -m domainbed.scripts.unsup_adapt\
        --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/GDRNet\
@@ -119,9 +118,8 @@ python -m domainbed.scripts.unsup_adapt\
 python -m domainbed.scripts.unsup_adapt\
        --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM\
        --adapt_algorithm=T3A
-```
-#### TSD
-```
+       
+TSD
 cd /path/to/RETIGEN/methods/TSD/code
 python unsupervise_adapt.py --dataset images \
                             --data_dir '/path/to/RETIGEN/datasets/' \
@@ -133,7 +131,9 @@ python unsupervise_adapt.py --dataset images \
                             --adapt_alg TSD \ 
                             --pretrain_dir '/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM' \
                             --lr 1e-4
+
 ```
+
 
 ## Citation
 If this repo is useful for your research, please consider citing our paper:
