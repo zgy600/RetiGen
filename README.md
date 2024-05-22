@@ -85,12 +85,67 @@ Your dataset should be organized as:
 
 ```
 
-#### Training souce domain
 
-We use the publicly released code "https://github.com/chehx/DGDR". You can follow the descriptions about installation and experiments in "https://github.com/chehx/DGDR".  We provide the trained weights file. 
+## Train and validate
 
-#### Training target domain
+### Training source domain
+   ```
+cd run/
+table_1_origin_DG_MFIDDR_DRTiD.sh
+   ```
+### Training target domain
+   ```
+cd run/
+. table_1_target_DG_MFIDDR.sh
+   ```
 
+### Test-time adaptation comparison
+#### TAST
+```
+cd /path/to/RETIGEN/methods/TAST
+python -m domainbed.scripts.unsup_adapt\
+       --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/GDRNet\
+       --adapt_algorithm=TAST
+python -m domainbed.scripts.unsup_adapt\
+       --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM\
+       --adapt_algorithm=TAST
+```
+#### T3A
+```
+cd /path/to/RETIGEN/methods/TAST
+python -m domainbed.scripts.unsup_adapt\
+       --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/GDRNet\
+       --adapt_algorithm=T3A
+python -m domainbed.scripts.unsup_adapt\
+       --input_dir=/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM\
+       --adapt_algorithm=T3A
+```
+#### TSD
+```
+cd /path/to/RETIGEN/methods/TSD/code
+python unsupervise_adapt.py --dataset images \
+                            --data_dir '/path/to/RETIGEN/datasets/' \
+                            --adapt_alg TSD \ 
+                            --pretrain_dir '/path/to/RETIGEN/trained_models/DG_MFIDDR/GDRNet' \
+                            --lr 1e-4
+python unsupervise_adapt.py --dataset images \
+                            --data_dir '/path/to/RETIGEN/datasets/' \
+                            --adapt_alg TSD \ 
+                            --pretrain_dir '/path/to/RETIGEN/trained_models/DG_MFIDDR/ERM' \
+                            --lr 1e-4
+```
+
+## Citation
+If this repo is useful for your research, please consider citing our paper:
+```bibtex
+@misc{chen2024retigen,
+      title={RetiGen: A Framework for Generalized Retinal Diagnosis Using Multi-View Fundus Images}, 
+      author={Ze Chen and Gongyu Zhang and Jiayu Huo and Joan Nunez do Rio and Charalampos Komninos and Yang Liu and Rachel Sparks and Sebastien Ourselin and Christos Bergeles and Timothy Jackson},
+      year={2024},
+      eprint={2403.15647},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 sh run/table_1_target.sh
 ```
