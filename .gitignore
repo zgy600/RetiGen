@@ -9,3 +9,4 @@ trained_models/Result_2view/*
 trained_models/Result_4view/*
 retigen/output
 run/output
+.gitignore
